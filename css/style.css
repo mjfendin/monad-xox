@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #3f3cbb;
+  color: white;
+  margin-top: 50px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  justify-content: center;
+  margin: auto;
+}
+
+.cell {
+  background-color: #ffffff;
+  border: 2px solid #b0a8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  transition: background-color 0.2s, transform 0.3s;
+}
+
+.cell:hover {
+  background-color: #eee9ff;
+}
+
+.cell img {
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+}
+
+.winning-cell {
+  background-color: #d6c8ff !important;
+  animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.status {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.timer {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #ffe6e6;
+}
